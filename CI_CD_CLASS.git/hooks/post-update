@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#echo "POST-UPDATE HOOK STARTED" >> "C:/jenkins-hook.log"
+
+curl -s http://localhost:8080/generic-webhook-trigger/invoke?token=CI_CD_CLASS
+
+#echo "" >> "C:/jenkins-hook.log"
+#echo "POST-UPDATE HOOK FINISHED" >> "C:/jenkins-hook.log"
+
+exec git update-server-info
